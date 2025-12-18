@@ -100,7 +100,7 @@
                     <!-- The requested Iframe is here -->
 
                     <iframe
-                        src="{{config('app.embed_url2')}}"
+                        src="{{config('app.embed_url')}}"
                         width="100%"
                         height="600"
                         frameborder="0"
@@ -113,7 +113,7 @@
                     <!-- The requested Iframe is here -->
 
                     <iframe
-                        src="{{config('app.embed_url')}}"
+                        src="{{config('app.embed_url2')}}"
                         width="100%"
                         height="600"
                         frameborder="0"
