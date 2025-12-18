@@ -95,7 +95,7 @@
             
             <!-- Iframe Card Container -->
             <div class="bg-white p-4 sm:p-8 rounded-2xl shadow-2xl border border-gray-100">
-                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3">Embedded Tool Demonstration (Calculator)</h3>
+                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3">Embedded Calculator Create Page</h3>
                 <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30">
                     <!-- The requested Iframe is here -->
 
@@ -108,7 +108,7 @@
                         class="rounded-xl">
                     </iframe>
                 </div>
-                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3 mt-8">Calculator Demo</h3>
+                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3 mt-8">Embedded Tool Demonstration (Calculator)</h3>
                 <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30 mt-8">
                     <!-- The requested Iframe is here -->
 
