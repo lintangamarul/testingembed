@@ -1,74 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClarityTools - Innovative Embedding Solutions</title>
-    <!-- Memuat Tailwind CSS CDN untuk styling modern -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Setting Inter font as default */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fb;
-            color: #1f2937;
-        }
-        /* Style for making the iframe responsive (4:3 ratio) */
-        .iframe-wrapper {
-            position: relative;
-            width: 100%;
-            padding-bottom: 75%; 
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem; /* Rounded corners */
-        }
-        .iframe-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <script>
-        // Konfigurasi warna Tailwind
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary-blue': '#10b981', /* Teal 500 */
-                        'primary-dark': '#0f766e', /* Teal 700 */
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="antialiased">
+@extends('embed.layouts.company')
 
-    <!-- 1. Header/Navigation Bar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <a href="#" class="flex-shrink-0 text-2xl font-bold text-primary-dark tracking-wide">
-                    Clarity<span class="text-primary-blue">Tools</span>
-                </a>
-                <!-- Menu Desktop -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#products" class="text-gray-600 hover:text-primary-blue transition duration-300 font-medium">Products</a>
-                    <a href="#about" class="text-gray-600 hover:text-primary-blue transition duration-300 font-medium">About Us</a>
-                    <a href="#features" class="text-gray-600 hover:text-primary-blue transition duration-300 font-medium">Features</a>
-                    <a href="#contact" class="text-white bg-primary-blue hover:bg-primary-dark px-4 py-1.5 rounded-full transition duration-300 shadow-md">Contact Us</a>
-                </div>
-                <!-- Menu Mobile (Placeholder) -->
-                <button class="md:hidden text-gray-600 hover:text-primary-blue p-2 rounded-md transition duration-300">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
-    </nav>
+@section('title', 'ClarityTools - Innovative Embedding Solutions')
 
+@section('content')
     <!-- 2. Hero Section -->
     <section class="py-20 bg-primary-blue bg-opacity-90">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -95,25 +29,12 @@
             
             <!-- Iframe Card Container -->
             <div class="bg-white p-4 sm:p-8 rounded-2xl shadow-2xl border border-gray-100">
-                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3">Embedded Calculator Create Page</h3>
+                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3">Embedded Tool Demonstration (Calculator)</h3>
+                
                 <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30">
                     <!-- The requested Iframe is here -->
-
-                    <iframe
-                        src="{{config('app.embed_url2')}}"
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        class="rounded-xl">
-                    </iframe>
-                </div>
-                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3 mt-8">Embedded Tool Demonstration (Calculator)</h3>
-                <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30 mt-8">
-                    <!-- The requested Iframe is here -->
-
-                    <iframe
-                        src="{{config('app.embed_url')}}"
+                    <iframe 
+                        src="https://review.clttoolbox.com.au/feature-dev/add-embed/embed/calculator/1d47b44c24b2912b7904788f735aceaf6e1512118e7e1cc64b11c88787c8dbc9" 
                         width="100%" 
                         height="600" 
                         frameborder="0" 
@@ -131,7 +52,6 @@
                 </div>
                 
             </div>
-            
             
         </div>
     </div>
@@ -219,46 +139,4 @@
             </a>
         </div>
     </section>
-
-    <!-- 7. Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <!-- Column 1: Logo & Description -->
-                <div>
-                    <h3 class="text-xl font-bold text-primary-blue mb-3">ClarityTools</h3>
-                    <p class="text-sm text-gray-400">The leading data embedding solution for the modern web.</p>
-                </div>
-                <!-- Column 2: Navigation -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-3">Navigation</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#products" class="hover:text-primary-blue transition duration-300">Our Products</a></li>
-                        <li><a href="#about" class="hover:text-primary-blue transition duration-300">About Us</a></li>
-                        <li><a href="#features" class="hover:text-primary-blue transition duration-300">Features</a></li>
-                    </ul>
-                </div>
-                <!-- Column 3: Resources -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-3">Resources</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-primary-blue transition duration-300">API Documentation</a></li>
-                        <li><a href="#" class="hover:text-primary-blue transition duration-300">Terms & Conditions</a></li>
-                        <li><a href="#" class="hover:text-primary-blue transition duration-300">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <!-- Column 4: Contact -->
-                <div>
-                    <h4 class="text-lg font-semibold mb-3">Contact Us</h4>
-                    <p class="text-sm text-gray-400">Email: info@claritytools.com</p>
-                    <p class="text-sm text-gray-400">Phone: (021) 555-TOOLS</p>
-                </div>
-            </div>
-            <div class="mt-10 pt-6 border-t border-gray-700 text-center">
-                <p class="text-sm text-gray-500">© 2024 ClarityTools. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+@endsection

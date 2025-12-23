@@ -15,4 +15,31 @@ class EmbedController extends Controller
     {
         return view('embed.demo');
     }
+
+    /**
+     * Menampilkan halaman Ribbed Deck Calculator
+     * @return \Illuminate\View\View
+     */
+    public function showRibbedDeck()
+    {
+        return view('embed.calculators.ribbed-deck');
+    }
+
+    /**
+     * Menampilkan halaman Beam Penetration Calculator
+     * @return \Illuminate\View\View
+     */
+    public function showBeamPenetration()
+    {
+        return view('embed.calculators.beam-penetration');
+    }
+
+    /**
+     * Menampilkan halaman CLT Wall Calculator
+     * @return \Illuminate\View\View
+     */
+    public function showCltWall()
+    {
+        return view('embed.calculators.clt-wall');
+    }
 }
