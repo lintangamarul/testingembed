@@ -83,14 +83,20 @@
                 </h3>
                 
                 <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30">
-                    <iframe 
-                        src="https://review.clttoolbox.com.au/feature-dev/add-embed/embed/calculator/1d47b44c24b2912b7904788f735aceaf6e1512118e7e1cc64b11c88787c8dbc9/play/ribbed_deck_design" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        class="rounded-xl">
-                    </iframe>
+                    <script src="https://review.clttoolbox.com.au/feature-dev/add-embed/embed/script/20cac6f800d11d49da4cb67fb06d56a77daaef57eb61ba217f5ca3ef190d4e4a.js" defer></script>
+                        <script>
+                        window.addEventListener('load', function() {
+                            window.cltToolboxEmbedCalculator({
+                                containerId: 'clt-toolbox-embed',
+                                type: 'ribbed_deck_design',
+                                width: '100%',
+                                height: '880px',
+                                border: 'none',
+                                borderRadius: '8px'
+                            });
+                        });
+                        </script>
+                    <div id="clt-toolbox-embed"></div>
                 </div>
 
                 <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-500 text-blue-800 rounded-md">

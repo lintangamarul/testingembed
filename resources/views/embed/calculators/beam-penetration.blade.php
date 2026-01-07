@@ -83,14 +83,20 @@
                 </h3>
                 
                 <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30">
-                    <iframe 
-                        src="https://test-clt.test/embed/calculator/4755060d0637625f8608ece1a1644bdc11b8fc5569084c0e921b2d52612b1aba" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        class="rounded-xl">
-                    </iframe>
+                    <script src="https://review.clttoolbox.com.au/feature-dev/add-embed/embed/script/20cac6f800d11d49da4cb67fb06d56a77daaef57eb61ba217f5ca3ef190d4e4a.js" defer></script>
+                    <script>
+                    window.addEventListener('load', function() {
+                        window.cltToolboxEmbedCalculator({
+                            containerId: 'clt-toolbox-embed',
+                            type: 'beam_design_2',
+                            width: '100%',
+                            height: '880px',
+                            border: 'none',
+                            borderRadius: '8px'
+                        });
+                    });
+                    </script>
+                    <div id="clt-toolbox-embed"></div>
                 </div>
 
                 <div class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-500 text-blue-800 rounded-md">

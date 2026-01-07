@@ -30,18 +30,24 @@
             height: 100%;
         }
         /* Dropdown styles - persistent hover */
+        .dropdown {
+            position: relative;
+        }
         .dropdown-menu {
-            display: none;
+            display: none !important;
             position: absolute;
-            top: 100%;
+            top: calc(100% + 8px);
             left: 0;
             z-index: 1000;
+            width: 224px;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #f3f4f6;
+            padding: 8px 0;
         }
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-        .dropdown-menu:hover {
-            display: block;
+        .dropdown.active .dropdown-menu {
+            display: block !important;
         }
     </style>
     <script>
@@ -83,7 +89,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
+                        <div class="dropdown-menu absolute left-0 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2">
                             <a href="{{ route('embed.calculator.ribbed-deck') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary-blue hover:text-white transition duration-200">
                                 <div class="font-semibold">Ribbed Deck</div>
                                 <div class="text-xs opacity-75">Deck calculator tool</div>
@@ -153,5 +159,26 @@
     </footer>
 
     @stack('scripts')
+    <script>
+        // Handle dropdown menu visibility with better event handling
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            
+            dropdown.addEventListener('mouseenter', function() {
+                this.classList.add('active');
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                this.classList.remove('active');
+            });
+            
+            // Close dropdown when clicking a link inside
+            dropdown.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

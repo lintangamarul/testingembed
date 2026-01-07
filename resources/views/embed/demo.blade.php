@@ -29,30 +29,40 @@
             
             <!-- Iframe Card Container -->
             <div class="bg-white p-4 sm:p-8 rounded-2xl shadow-2xl border border-gray-100">
-                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3">Embedded Tool Demonstration (Calculator)</h3>
+                <h3 class="text-2xl font-semibold text-primary-dark mb-4 border-b pb-3">Embedded Tool Demonstration (Calculator Type)</h3>
                 
-                <div class="iframe-wrapper shadow-xl ring-4 ring-primary-blue/30">
-                    <!-- The requested Iframe is here -->
-                    <iframe 
-                        src="https://review.clttoolbox.com.au/feature-dev/add-embed/embed/calculator/1d47b44c24b2912b7904788f735aceaf6e1512118e7e1cc64b11c88787c8dbc9" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        allowfullscreen 
-                        class="rounded-xl">
-                    </iframe>
-                </div>
+                <div class="mt-6">
+                    <p class="text-gray-600 mb-6">Select a calculator type below to see the embedded tool:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                         <!-- CLT Wall Calculator -->
+                        <a href="{{ route('embed.calculator.clt-wall') }}" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-blue hover:bg-primary-blue hover:text-white transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                <h4 class="font-semibold">CLT Wall</h4>
+                            </div>
+                            <p class="text-sm opacity-75">Cross-laminated timber wall design and analysis</p>
+                        </a>
+                        <!-- Ribbed Deck Calculator -->
+                        <a href="{{ route('embed.calculator.ribbed-deck') }}" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-blue hover:bg-primary-blue hover:text-white transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4 4h2v14h-2zm4-4h2v18h-2z"/></svg>
+                                <h4 class="font-semibold">Ribbed Deck</h4>
+                            </div>
+                            <p class="text-sm opacity-75">Professional deck calculation tool with advanced analysis</p>
+                        </a>
 
-                <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 rounded-md">
-                    <p class="font-bold">Important Notice:</p>
-                    <p class="text-sm">For actual use, ensure you replace 
-                        <code class="bg-yellow-100 p-0.5 rounded text-sm font-mono text-yellow-900">{token}</code> 
-                        in the *iframe*'s <code class="bg-yellow-100 p-0.5 rounded text-sm font-mono text-yellow-900">src</code> 
-                        attribute with a valid authentication token from your ClarityTools dashboard.</p>
+                        <!-- Beam Penetration Calculator -->
+                        <a href="{{ route('embed.calculator.beam-penetration') }}" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-blue hover:bg-primary-blue hover:text-white transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M5 3h14a1 1 0 011 1v16a1 1 0 01-1 1H5a1 1 0 01-1-1V4a1 1 0 011-1zm7 2v14m-5-7h10"/></svg>
+                                <h4 class="font-semibold">Beam Penetration</h4>
+                            </div>
+                            <p class="text-sm opacity-75">Calculate beam penetration depth and specifications</p>
+                        </a>
+                    </div>
                 </div>
-                
             </div>
-            
+
         </div>
     </div>
 
