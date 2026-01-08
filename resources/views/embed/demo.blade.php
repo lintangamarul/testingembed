@@ -33,7 +33,7 @@
                 
                 <div class="mt-6">
                     <p class="text-gray-600 mb-6">Select a calculator type below to see the embedded tool:</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                          <!-- CLT Wall Calculator -->
                         <a href="{{ route('embed.calculator.clt-wall') }}" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-blue hover:bg-primary-blue hover:text-white transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                             <div class="flex items-center mb-2">
@@ -58,6 +58,15 @@
                                 <h4 class="font-semibold">Beam Penetration</h4>
                             </div>
                             <p class="text-sm opacity-75">Calculate beam penetration depth and specifications</p>
+                        </a>
+
+                        <!-- Timber Concrete Composite Calculator -->
+                        <a href="{{ route('embed.calculator.timber-concrete-composite') }}" class="block p-4 border border-gray-200 rounded-lg hover:border-primary-blue hover:bg-primary-blue hover:text-white transition duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M7 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H7zm0 12a2 2 0 00-2 2v2a2 2 0 002 2h10a2 2 0 002-2v-2a2 2 0 00-2-2H7z"/></svg>
+                                <h4 class="font-semibold">Timber Concrete Composite</h4>
+                            </div>
+                            <p class="text-sm opacity-75">Design composite structures with timber and concrete</p>
                         </a>
                     </div>
                 </div>

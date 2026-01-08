@@ -42,4 +42,13 @@ class EmbedController extends Controller
     {
         return view('embed.calculators.clt-wall');
     }
+
+    /**
+     * Menampilkan halaman Timber Concrete Composite Calculator
+     * @return \Illuminate\View\View
+     */
+    public function showTimberConcreteComposite()
+    {
+        return view('embed.calculators.timber-concrete-composite');
+    }
 }

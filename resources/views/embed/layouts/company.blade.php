@@ -114,6 +114,10 @@
                                 <div class="font-semibold">CLT Wall</div>
                                 <div class="text-xs opacity-75">Wall design tool</div>
                             </a>
+                            <a href="{{ route('embed.calculator.timber-concrete-composite') }}" class="block px-4 py-2 text-gray-700 hover:bg-primary-blue hover:text-white transition duration-200">
+                                <div class="font-semibold">Timber Concrete Composite</div>
+                                <div class="text-xs opacity-75">Composite structure design</div>
+                            </a>
                         </div>
                     </div>
                     
