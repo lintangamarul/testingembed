@@ -33,6 +33,18 @@
         .dropdown {
             position: relative;
         }
+        
+        /* Invisible bridge to prevent dropdown from disappearing */
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 8px;
+            z-index: 999;
+        }
+        
         .dropdown-menu {
             display: none !important;
             position: absolute;
@@ -160,16 +172,20 @@
 
     @stack('scripts')
     <script>
-        // Handle dropdown menu visibility with better event handling
+        // Handle dropdown menu visibility with invisible bridge
         document.querySelectorAll('.dropdown').forEach(dropdown => {
-            const button = dropdown.querySelector('button');
+            let hideTimeout;
             
             dropdown.addEventListener('mouseenter', function() {
+                clearTimeout(hideTimeout);
                 this.classList.add('active');
             });
             
             dropdown.addEventListener('mouseleave', function() {
-                this.classList.remove('active');
+                // Add small delay before hiding to ensure smooth transition
+                hideTimeout = setTimeout(() => {
+                    this.classList.remove('active');
+                }, 100);
             });
             
             // Close dropdown when clicking a link inside
